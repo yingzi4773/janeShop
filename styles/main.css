@@ -406,3 +406,157 @@
 #jnBrandContent li a:hover{
     color:#008CD7;
 }
+/*详情页的样式*/
+#jnProitem{
+    float:left;
+    width:312px;
+    height:560px;
+    display:inline;
+}
+
+#jnProitem .jqzoomWrap{
+    border:1px solid #BBB;
+    cursor:pointer;
+    float:left;
+    padding:0;
+    /*position:relative;*/
+}
+#jnProitem span{
+    clear:both;
+    display:block;
+    padding-bottom:10px;
+    padding-top:10px;
+    text-align:center;
+    width:320px;
+}
+#jnProitem ul.imgList{
+    height:80px;
+    width:220px;
+    overflow:hidden;
+}
+#jnProitem ul.imgList li{
+    float:left;
+    margin-right:10px;
+    padding-bottom:18px;
+}
+#jnProitem ul.imgList li img{
+    width:60px;
+    height:60px;
+    padding:1px;
+    background:#eee;
+    cursor:pointer;
+}
+#jnProitem ul.imgList li img:hover{
+    padding:1px;
+    background:#999;
+}
+/*选项卡切换*/
+.tab{
+    clear:both;
+    float:left;
+    height:230px;
+    width:310px;
+    overflow:hidden;
+
+}
+.tab .tab_menu ul{
+    clear:both;
+    border-bottom:1px solid #E4E4E4;
+    height:20px;
+}
+
+.tab .tab_menu li{
+    float:left;
+    margin:0 10px 0 0;
+
+}
+.tab .tab_menu a{
+    background-color:#E4E4E4;
+    color:#000;
+    display:inline-block;
+    height:20px;
+    line-height:20px;
+    padding:0 10px;
+}
+.tab .tab_menu .chos{
+    background:url("../images/chos.gif") no-repeat scroll 50% bottom transparent;
+    padding-bottom:3px;
+}
+.tab .tab_menu .chos a{
+    background-color:#FA5889;
+    color:#fff;
+    /*outline:0 none;*/
+}
+.tab .tab_box{
+    clear:both;
+    border:1px solid #E4E4E4;
+    border-style:none solid solid;
+    border-width:0 1px 1px;
+}
+.tab .hide{
+    display:none;
+}
+/*右侧详情页*/
+#jnDetails{
+    float:left;
+    display:inline;
+    overflow:hidden;
+    width:468px;
+    height:560px;
+}
+#jnDetails .jnProDetail{
+    padding:0 10px 10px;
+}
+#jnDetails .jnProDetail h4{
+    /*font-size:100%;*/
+    height:18px;
+    line-height:18px;
+}
+#jnDetails .jnProDetail li{
+    line-height:25px;
+    float:left;
+    width:100%;
+}
+#jnDetails .jnProDetail strong{
+    font-weight:400;
+}
+#jnDetails .jnProDetail .tbDetailPrice strong{
+    color:#FF5500;
+    font-size:24px;
+    padding-right:5px;
+}
+#jnDetails .jnProDetail .color_change li{
+    float:left;
+    width:40px;
+    margin-right:10px;
+}
+#jnDetails .jnProDetail .color_change li img{
+    width:30px;
+    height:30px;
+    border:1px solid #BBB;
+    padding:1px;
+    cursor:pointer;
+}
+#jnDetails .jnProDetail .color_change li img:hover{
+    border:1px solid #f60;
+}
+#jnDetails .jnProDetail .pro_size li{
+    float:left;
+    width:30px;
+    height:30px;
+    border:1px solid #AAA;
+    text-align:center;
+    line-height:30px;
+    margin-right:6px;
+    cursor:pointer;
+}
+#jnDetails .jnProDetail .rating{
+    background:url("../images/star-matrix.gif") no-repeat 0 0;
+    width:80px;
+    height:16px;
+    overflow:hidden;
+    text-indent:-9999px;
+    margin-bottom:20px;
+    padding:0;
+    /*position:relative;*/
+}
