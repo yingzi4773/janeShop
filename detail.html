@@ -5,6 +5,9 @@
     <title>详情页</title>
     <link rel="stylesheet" href="styles/reset.css" type="text/css">
     <link rel="stylesheet" href="styles/main.css" type="text/css">
+    <link rel="stylesheet" href="styles/thickbox.css">
+    <link rel="stylesheet" href="styles/box.css">
+    <link rel="stylesheet" href="styles/skin/skin_0.css" id="cssfile">
 </head>
 <body>
 <!--头部-->
@@ -182,13 +185,13 @@
             <div class="jnCatainfo">
                 <h3>推荐品牌</h3>
                 <ul>
-                    <li><a href="#nogo" >耐克</a></li>
-                    <li><a href="#nogo" class="promoted ">阿迪达斯<del class="hot"></del></a></li>
+                    <li><a href="detail.html" >耐克</a></li>
+                    <li><a href="#nogo" class="promoted ">阿迪达斯</a></li>
                     <li><a href="#nogo" >达芙妮</a></li>
                     <li><a href="#nogo" >李宁</a></li>
                     <li><a href="#nogo" >安踏</a></li>
                     <li><a href="#nogo" >奥康</a></li>
-                    <li><a href="#nogo" class="promoted">骆驼<del class="hot"></del></a></li>
+                    <li><a href="#nogo" class="promoted">骆驼</a></li>
                     <li><a href="#nogo" >特步</a></li>
                 </ul>
                 <br class="clear" />
@@ -235,7 +238,7 @@
         <!--大图小图选项卡开始-->
         <div id="jnProitem">
             <div class="jqzoomWrap">
-                <a href="images/pro_img/blue_one_big.jpg" class="jqzoom" rel='gal1' title="免烫高支棉条纹衬衣" >
+                <a  href="images/pro_img/blue_one_big.jpg" class="jqzoom" rel="gal1" title="免烫高支棉条纹衬衣" >
                     <img src="images/pro_img/blue_one_small.jpg" title="免烫高支棉条纹衬衣" alt="免烫高支棉条纹衬衣" id="bigImg" />
                 </a>
             </div>
@@ -260,9 +263,9 @@
             <div class="tab">
                 <div class="tab_menu">
                     <ul>
-                        <li class="chos"><a href="">产品属性</a></li>
-                        <li><a href="">产品尺码表</a></li>
-                        <li><a href="">产品介绍</a></li>
+                        <li><a href="#nogo">产品属性</a></li>
+                        <li><a href="#nogo">产品尺码表</a></li>
+                        <li><a href="#nogo">产品介绍</a></li>
                     </ul>
                 </div>
                 <div class="tab_box">
@@ -345,9 +348,33 @@
             </div>
         </div>
         <!--商品详情结束-->
+        <!-- 普通弹出层 [[ -->
+        <div id="basic-dialog-ok">
+            <div class="box-title show"><h2>提示</h2></div>
+            <div class="box-main">
+                <div class="tips">
+			<span class="tips-ico">
+				<span class="ico-ok"><!-- 图标 --></span>
+			</span>
+                    <div class="tips-content">
+                        <div class="tips-title" id="jnDialogContent"></div>
+                        <div class="tips-line"></div>
+                    </div>
+                </div>
+                <div class="box-buttons"><button type="button" class="simplemodal-close">关 闭</button></div>
+            </div>
+        </div>
+        <!-- 普通弹出层 ]] -->
     </div>
 </div>
 <!--主要内容结束-->
-<div id="footer">  </div>
+<div id="footer"> Copyright &copy; 2017 - 2020 JaneShop MJY. </div>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/jquery.cookie.js"></script>
+<script src="scripts/jquery.jqzoom.js"></script>
+<script src="scripts/use_jqzoom.js"></script>
+<script src="scripts/jquery.thickbox.js"></script>
+<script src="scripts/jquery.simplemodal.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>

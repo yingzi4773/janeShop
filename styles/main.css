@@ -338,6 +338,14 @@
     color:#008CD7;
 
 }
+#tooltip{
+    position:absolute;
+    border:1px solid #333;
+    background:#f7f5d1;
+    padding:1px;
+    color:#333;
+    display:none;
+}
 /*下边的滚动图片*/
 #jnBrand{
     float:left;
@@ -436,6 +444,17 @@
 #jnBrandContent li a:hover{
     color:#008CD7;
 }
+.imageMask{
+    background-color:#ffffff;
+    filter:alpha(opacity=0);
+    opacity: 0;
+    cursor: pointer;
+}
+.imageOver{
+    background:url("../images/zoom.gif") no-repeat 50% 50%;
+    filter:alpha(opacity=60);
+    opacity:0.6;
+}
 /*详情页的样式*/
 #jnProitem{
     float:left;
@@ -449,7 +468,7 @@
     cursor:pointer;
     float:left;
     padding:0;
-    /*position:relative;*/
+    position:relative;
 }
 #jnProitem span{
     clear:both;
@@ -500,6 +519,9 @@
     margin:0 10px 0 0;
 
 }
+.tab .tab_menu li a:hover{
+    text-decoration:underline;
+}
 .tab .tab_menu a{
     background-color:#E4E4E4;
     color:#000;
@@ -515,7 +537,7 @@
 .tab .tab_menu .chos a{
     background-color:#FA5889;
     color:#fff;
-    /*outline:0 none;*/
+    outline:0 none;
 }
 .tab .tab_box{
     clear:both;
@@ -526,6 +548,7 @@
 .tab .hide{
     display:none;
 }
+
 /*右侧详情页*/
 #jnDetails{
     float:left;
@@ -580,6 +603,11 @@
     margin-right:6px;
     cursor:pointer;
 }
+#jnDetails .jnProDetail .pro_size li.cur{
+    border: 1px solid #AAA;
+    background-color: #f60;
+}
+
 #jnDetails .jnProDetail .rating{
     background:url("../images/star-matrix.gif") no-repeat 0 0;
     width:80px;
@@ -588,5 +616,148 @@
     text-indent:-9999px;
     margin-bottom:20px;
     padding:0;
-    /*position:relative;*/
+    position:relative;
+}
+#jnDetails .jnProDetail .nostar {background-position:0 0}
+#jnDetails .jnProDetail .onestar {background-position:0 -16px}
+#jnDetails .jnProDetail .twostar {background-position:0 -32px}
+#jnDetails .jnProDetail .threestar {background-position:0 -48px}
+#jnDetails .jnProDetail .fourstar {background-position:0 -64px}
+#jnDetails .jnProDetail .fivestar {background-position:0 -80px}
+ul.rating li {
+    cursor: pointer;
+    float:left;
+    text-indent:-999em;
+}
+ul.rating li a {
+    position:absolute;
+    left:0;
+    top:0;
+    width:16px;
+    height:16px;
+    text-decoration:none;
+    z-index: 200;
+}
+ul.rating li.one a {left:0}
+ul.rating li.two a {left:16px;}
+ul.rating li.three a {left:32px;}
+ul.rating li.four a {left:48px;}
+ul.rating li.five a {left:64px;}
+#footer{
+    position:relative;
+    margin:0 auto;
+    width:990px;
+    text-align:center;
+    color:#666;
+    padding:18px 0;
+}
+
+/* jquery zoom */
+.zoomPad{
+    position:relative;
+    float:left;
+    z-index:99;
+    cursor:crosshair;
+}
+.zoomPreload{
+    -moz-opacity:0.8;
+    opacity: 0.8;
+    filter: alpha(opacity = 80);
+    color: #333;
+    font-size: 12px;
+    font-family: Tahoma;
+    text-decoration: none;
+    border: 1px solid #CCC;
+    background-color: white;
+    padding: 8px;
+    text-align:center;
+    background-image: url(../images/zoomloader.gif);
+    background-repeat: no-repeat;
+    background-position: 43px 30px;
+    z-index:110;
+    width:90px;
+    height:43px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    * width:100px; /* 带*的是只能被IE识别*/
+    * height:49px;
+}
+.zoomPup{
+    overflow:hidden;
+    background-color: #FFF;
+    -moz-opacity:0.6;
+    opacity: 0.6;
+    filter: alpha(opacity = 60);
+    z-index:120;
+    position:absolute;
+    border:1px solid #CCC;
+    z-index:101;
+    cursor:crosshair;
+}
+.zoomOverlay{
+    position:absolute;
+    left:0px;
+    top:0px;
+    background:#FFF;
+    /*opacity:0.5;*/
+    z-index:5000;
+    width:100%;
+    height:100%;
+    display:none;
+    z-index:101;
+}
+.zoomWindow{
+    position:absolute;
+    left:110%;
+    top:40px;
+    background:#FFF;
+    z-index:6000;
+    height:auto;
+    z-index:10000;
+    z-index:110;
+}
+.zoomWrapper{
+    position:relative;
+    border:1px solid #999;
+    z-index:110;
+}
+.zoomWrapperTitle{
+    display:block;
+    background:#999;
+    color:#FFF;
+    height:18px;
+    line-height:18px;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+    font-size:12px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:120;
+    -moz-opacity:0.6;
+    opacity: 0.6;
+    filter: alpha(opacity = 60);
+}
+.zoomWrapperImage{
+    display:block;
+    position:relative;
+    overflow:hidden;
+    z-index:110;
+
+}
+.zoomWrapperImage img{
+    border:0px;
+    display:block;
+    position:absolute;
+    z-index:101;
+}
+.zoomIframe{
+    z-index: -1;
+    filter:alpha(opacity=0);
+    -moz-opacity: 0.80;
+    opacity: 0.80;
+    position:absolute;
+    display:block;
 }
